@@ -1,3 +1,274 @@
-body{
-  background-color: red;
+*, ::before, ::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li, ul{
+  list-style: none;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+body {
+  font-family: $font-base;
+  font-size: $font-size-default;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_logo {
+    width: 100%;
+    position: relative;
+    height: 4rem;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $grey;
+    padding: 1rem 0;
+
+    p {
+      padding-left: .5rem;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}
+
+.banner {
+  background-color: $light-grey;
+  padding-bottom: 2.5rem;
+
+  &_title {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  &_intro {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+  }
+
+  &_btn {
+    text-align: center;
+    background: $gradient;
+    padding: 1rem 1.1rem;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    border-radius: 40px;
+    box-shadow: $shadow;
+  }
+}
+
+.steps {
+  padding: 2.5rem 1.3rem;
+
+
+  &_title {
+    padding-bottom: 1.5rem
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    width: calc(100% - .8rem);
+    background-color: $light-grey;
+    padding: 1.7rem 0 1.3rem 2rem;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    position: relative;
+    margin: 0 0 1.5rem .8rem;
+    transition: all .3s ease;
+
+    &_icon {
+      padding-right: 1.5rem;
+      font-size: 1.1rem;
+      color: $dark-grey;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: .9rem;
+    }
+
+    &_number {
+      position: absolute;
+      top: 50%;
+      left: -.7rem;
+      color: #FFFFFF;
+      background-color: $purple;
+      border-radius: 50px;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background-color: $light-purple;
+
+      .step_icon{
+        color: $purple;
+      }
+    }
+  }
+}
+
+.restaurants{
+  padding: 2.5rem 1.3rem;
+  background-color: $light-grey;
+
+  .restaurants_cards{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+
+    .card{
+      display: flex;
+      flex-direction: column;
+      height: 10%;
+      border-radius: 20px;
+      background: #FFFFFF;
+      position: relative;
+      margin-bottom: 1.5rem;
+      box-shadow: $gradient;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      &_img{
+        height: 25vh;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+
+      &_bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        &_content{
+          &_title{
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding-bottom: .5rem;
+          }
+
+          &_location{
+            font-size: 1rem;
+            font-weight: 300;
+          }
+        }
+
+        &_icon{
+          font-size: 1.2rem;
+
+          .regular{
+            display: flex;
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+
+          .solid{
+            display: none;
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+
+          &:hover{
+            .regular{
+              display: none;
+            }
+
+            .solid{
+              display: flex;
+            }
+          }
+        }
+
+      }
+
+      .new_label{
+        color: $green;
+        font-weight: 500;
+        background-color: $light-green;
+        padding: .5rem .8rem;
+        width: fit-content;
+        border-radius: 5px;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        box-shadow: $shadow;
+      }
+
+    }
+  }
+
+  .elem-2{
+    .card_img{
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
+
+.footer{
+  padding: 1.5rem 1.3rem;
+  background-color: $light-black;
+
+  &_logo{
+    width: 30%;
+    padding-bottom: 1rem;
+  }
+
+  &_links{
+    .link{
+      font-size: .9rem;
+      padding-bottom: .5rem;
+      display: flex;
+      align-items: center;
+
+      i{
+        padding-right: .7rem;
+        color: #FFFFFF;
+      }
+
+      .fa-handshake{
+        transform: rotate(-30deg);
+        font-size: .63rem;
+      }
+    }
+  }
 }
