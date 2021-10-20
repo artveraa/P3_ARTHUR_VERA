@@ -8,4 +8,8 @@ h2{
   font-family: $font-base;
   font-size: 1.5rem;
   font-weight: 700;
+  @media (min-width: 820px){
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+  }
 }
