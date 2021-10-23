@@ -24,11 +24,15 @@
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
-
-
-
+  box-shadow: $shadow;
+  transition: all .3s ease;
+  animation-name: apparition;
+  animation-duration: 1s;
 
   &:hover {
+
+    cursor: pointer;
+    box-shadow: $shadow-hover;
 
     .menu-item_select{
       margin-right: -1rem;
@@ -98,6 +102,13 @@
   font-weight: 500;
   border-radius: 40px;
   box-shadow: $shadow;
+  transition: all .3s ease;
+
+  &:hover{
+    background: $gradient-hover;
+    box-shadow: $shadow-hover;
+    cursor: pointer;
+  }
 }
 
 @mixin heart_icon{

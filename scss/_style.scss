@@ -107,6 +107,7 @@ body {
     margin: 0 0 1.5rem .8rem;
     transition: all .3s ease;
 
+
     &_icon {
       padding-right: 1.5rem;
       font-size: 1.1rem;
@@ -258,6 +259,26 @@ body {
 }
 
 
+  .loader{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 20rem;
+    height: 20rem;
+    background: $gradient;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loader-anim 3s;
+    transform-origin: center;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+
+
 
 // À la Française
 
@@ -343,6 +364,7 @@ body {
         }
 
         .menu-item{
+
           @include menu-item;
         }
 

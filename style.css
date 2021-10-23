@@ -1,4 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@keyframes loader-anim {
+  0% {
+    transform: translate(-50%, -40%) scale(0.5);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-50%, -40%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -40%) scale(0.5);
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    transform: translate(-50%, -40%) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 h1 {
   font-family: Roboto, sans-serif;
   font-size: 1.7rem;
@@ -97,9 +126,15 @@ body {
   color: #FFFFFF;
   font-weight: 500;
   border-radius: 40px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
   padding: 1rem 1.1rem;
   margin: 0 auto;
+}
+.banner_btn:hover {
+  background: linear-gradient(180deg, rgba(239, 116, 218, 0.9) 17%, rgba(157, 90, 220, 0.9) 94%);
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  cursor: pointer;
 }
 
 .steps {
@@ -120,7 +155,7 @@ body {
   background-color: #F6F6F6;
   padding: 1.7rem 0 1.3rem 2rem;
   border-radius: 20px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
   margin: 0 0 1.5rem 0.8rem;
   transition: all 0.3s ease;
@@ -180,7 +215,7 @@ body {
   background: #FFFFFF;
   position: relative;
   margin-bottom: 1.5rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .restaurants .restaurants_cards .card:last-child {
   margin-bottom: 0;
@@ -244,7 +279,7 @@ body {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 @media (min-width: 820px) {
   .restaurants .restaurants_cards {
@@ -265,6 +300,24 @@ body {
 .restaurants .elem-2 .card_img {
   object-fit: cover;
   object-position: center center;
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(180deg, #ef74da 17%, #9d5adc 94%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-anim 3s;
+  transform-origin: center;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .page-menu .container {
@@ -378,6 +431,14 @@ body {
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
+  animation-name: apparition;
+  animation-duration: 1s;
+}
+.page-menu .main .carte .entrees .menu-item:hover {
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 .page-menu .main .carte .entrees .menu-item:hover .menu-item_select {
   margin-right: -1rem;
@@ -456,6 +517,14 @@ body {
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
+  animation-name: apparition;
+  animation-duration: 1s;
+}
+.page-menu .main .carte .plats .menu-item:hover {
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 .page-menu .main .carte .plats .menu-item:hover .menu-item_select {
   margin-right: -1rem;
@@ -534,6 +603,14 @@ body {
   border-radius: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
+  animation-name: apparition;
+  animation-duration: 1s;
+}
+.page-menu .main .carte .desserts .menu-item:hover {
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 .page-menu .main .carte .desserts .menu-item:hover .menu-item_select {
   margin-right: -1rem;
@@ -599,8 +676,14 @@ body {
   color: #FFFFFF;
   font-weight: 500;
   border-radius: 40px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease;
   padding: 1rem 2.5rem;
+}
+.page-menu .main .carte .btn a:hover {
+  background: linear-gradient(180deg, rgba(239, 116, 218, 0.9) 17%, rgba(157, 90, 220, 0.9) 94%);
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  cursor: pointer;
 }
 
 .footer {
