@@ -18,6 +18,14 @@
     opacity: 0;
   }
 }
+@keyframes loader-container {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
 @keyframes apparition {
   0% {
     transform: translateY(5rem);
@@ -302,6 +310,21 @@ body {
   object-position: center center;
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  animation-name: loader-container;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 2;
+}
+
 .loader {
   position: absolute;
   top: 40%;
@@ -435,6 +458,8 @@ body {
   transition: all 0.3s ease;
   animation-name: apparition;
   animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .page-menu .main .carte .entrees .menu-item:hover {
   cursor: pointer;
@@ -457,10 +482,16 @@ body {
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .entrees .menu-item_header .subtitle {
   font-size: 0.9rem;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .entrees .menu-item_price {
   display: flex;
@@ -521,6 +552,9 @@ body {
   transition: all 0.3s ease;
   animation-name: apparition;
   animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 .page-menu .main .carte .plats .menu-item:hover {
   cursor: pointer;
@@ -543,10 +577,16 @@ body {
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .plats .menu-item_header .subtitle {
   font-size: 0.9rem;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .plats .menu-item_price {
   display: flex;
@@ -607,6 +647,9 @@ body {
   transition: all 0.3s ease;
   animation-name: apparition;
   animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 .page-menu .main .carte .desserts .menu-item:hover {
   cursor: pointer;
@@ -629,10 +672,16 @@ body {
   font-size: 1rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .desserts .menu-item_header .subtitle {
   font-size: 0.9rem;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .main .carte .desserts .menu-item_price {
   display: flex;

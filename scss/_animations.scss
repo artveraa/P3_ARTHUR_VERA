@@ -24,6 +24,16 @@
 
 }
 
+@keyframes loader-container {
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    transform: translateX(100vw);
+  }
+}
+
 @keyframes apparition {
   0%{
     transform: translateY(5rem);

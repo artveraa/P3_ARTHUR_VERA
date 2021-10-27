@@ -258,6 +258,21 @@ body {
   }
 }
 
+.loader-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  animation-name: loader-container;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 2;
+}
+
 
   .loader{
     position: absolute;
@@ -361,6 +376,7 @@ body {
 
         &_title{
           @include section-title;
+
         }
 
         .menu-item{
@@ -382,6 +398,8 @@ body {
 
         .menu-item{
           @include menu-item;
+
+          animation-delay: 1s;
         }
 
         @media (min-width: 820px){
@@ -398,6 +416,7 @@ body {
 
         .menu-item{
           @include menu-item;
+          animation-delay: 2s;
         }
 
         @media (min-width: 820px){

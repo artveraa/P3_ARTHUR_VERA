@@ -6,6 +6,7 @@
   width: fit-content;
   margin-bottom: 1.5rem;
 
+
   &::before {
     content: '';
     position: absolute;
@@ -28,6 +29,8 @@
   transition: all .3s ease;
   animation-name: apparition;
   animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 
   &:hover {
 
@@ -56,12 +59,17 @@
       font-size: 1rem;
       font-weight: 700;
       padding-bottom: .3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     .subtitle{
       font-size: .9rem;
       font-weight: 300;
-
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
