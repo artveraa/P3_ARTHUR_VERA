@@ -1,3 +1,4 @@
+// ANIMATION POUR LE LOADER LOGO
 @keyframes loader-anim {
   0%{
     transform: translate(-50%, -40%) scale(.5);
@@ -24,16 +25,20 @@
 
 }
 
+// ANIMATION POUR TRANSLATER LE CONTAINER AU LOADER
 @keyframes loader-container {
   0%{
     opacity: 1;
   }
 
   100%{
+
     transform: translateX(100vw);
   }
 }
 
+
+// APPARITION PROGRESSIVE DES ELEMENTS
 @keyframes apparition {
   0%{
     transform: translateY(5rem);

@@ -1,7 +1,11 @@
+// suppression des marges et espaces de base
+
 *, ::before, ::after {
   margin: 0;
   box-sizing: border-box;
 }
+
+// éléments courants utilisés dans tout le site
 
 li, ul {
   list-style: none;
@@ -18,11 +22,14 @@ a.card_bottom_content, a.header_arrow {
   color: #000;
 }
 
+
 body {
   font-family: $font-base;
   font-size: $font-size-default;
   font-weight: 400;
 }
+
+// HEADER
 
 .header {
   display: flex;
@@ -58,6 +65,8 @@ body {
   }
 }
 
+// BANNER
+
 .banner {
   background-color: $light-grey;
   padding-bottom: 2.5rem;
@@ -83,6 +92,8 @@ body {
     margin: 0 auto;
   }
 }
+
+// STEPS
 
 .steps {
   padding: 2.5rem 1.3rem;
@@ -151,6 +162,8 @@ body {
 
   }
 }
+
+// RESTAURANTS
 
 .restaurants {
   padding: 2.5rem 1.3rem;
@@ -258,6 +271,8 @@ body {
   }
 }
 
+// LOADER
+
 .loader-container{
   position: fixed;
   top: 0;
@@ -295,7 +310,7 @@ body {
 
 
 
-// À la Française
+// ------ PAGE MENU ------ //
 
 .page-menu {
 
@@ -441,6 +456,7 @@ body {
   }
 }
 
+// FOOTER
 
 .footer {
   padding: 1.5rem 1.3rem;

@@ -1,8 +1,12 @@
+//GESTION DES TYPO
 $font-base: Roboto, sans-serif;
 $font-alt: Shrikhand, serif;
 $font-size-default: 14px;
+
+// RACCOURCI POUR ACCEDER AUX IMAGES
 $image-path: '/images/restaurants/';
 
+// COULEURS
 $grey: #EAEAEA;
 $light-grey: #F6F6F6;
 $dark-grey: #7E7E7E;
@@ -12,6 +16,7 @@ $light-purple: #F5EDFF;
 $green: #2A8766;
 $light-green: #99E2D0;
 
+// DEGRADES ET OMBRES
 $gradient: linear-gradient(180deg, rgba(239,116,218,1) 17%, rgba(157,90,220,1) 94%);
 $gradient-hover: linear-gradient(180deg, rgba(239,116,218,.9) 17%, rgba(157,90,220,.9) 94%);
 $shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
